@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Light/Dark Theme Toggle</title>
+  <style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 40px;
+    transition: background-color 0.3s, color 0.3s;
+    text-align: center;
+  }
+
+  .light-theme {
+    background-color: #ffffff;
+    color: #000000;
+  }
+
+  .dark-theme {
+    background-color: #000000;
+    color: #ffffff;
+  }
+
+  button {
+    margin-top: 20px;
+    padding: 15px ;
+    font-size: 10px;
+    cursor: pointer;
+    border: 2px solid black;
+    border-radius:5px;
+    background-color: #e0e0e0;
+
+  }
+
+  </style>
+  
+
+</head>
+<body class="light-theme">
+  <h1>Welcome to My Themed Page</h1>
+  <p>This is an example of a webpage with a light/dark mode toggle.</p>
+
+  <button   id="themeToggle" onclick="toggleTheme()">🌙 Dark Mode</button>
+  
+
+  <script>
+    function toggleTheme() {
+  const body = document.body;
+  const button = document.getElementById("themeToggle");
+
+  
+  // Toggle between light and dark class
+  if (body.classList.contains("dark-theme")) {
+    body.classList.replace("dark-theme", "light-theme");
+    button.textContent = "🌙 Dark Mode";
+  } else {
+    body.classList.replace("light-theme", "dark-theme");
+    button.textContent = "🌞 Light Mode";
+  }
+}
+  </script>
+</body>
+</html>

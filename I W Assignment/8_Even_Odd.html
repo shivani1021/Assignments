@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Even and Odd</title>
+    
+</head>
+<body>
+<script>
+let num = prompt("Enter a number:");
+
+// Convert input to number
+num = Number(num);
+
+if (isNaN(num)) {
+    alert("Invalid input!");
+} else {
+    // Check even or odd
+    if (num % 2 === 0) {
+        alert(num + " is Even.");
+    } else {
+        alert(num + " is Odd.");
+    }
+}
+</script>
+</body>
+</html>
